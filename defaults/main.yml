@@ -11,7 +11,7 @@ system_is_ec2: false
 # Supported OSs will not need for this to be changed - see README e.g. CentOS
 os_check: true
 
-rhel9cis_section1: true
+rhel9cis_section1: false
 rhel9cis_section2: true
 rhel9cis_section3: true
 rhel9cis_section4: true
