@@ -23,7 +23,7 @@ rhel9cis_section6: true
 # - level1-server
 # - level2-workstation
 rhel9cis_level_1: true
-rhel9cis_level_2: true
+rhel9cis_level_2: false
 
 rhel9cis_selinux_disable: false
 rhel9cis_legacy_boot: false
