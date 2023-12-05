@@ -1,19 +1,6 @@
 ---
 
-- name: "1.8.1 | PATCH | Ensure GNOME Display Manager is removed"
-  ansible.builtin.package:
-      name: gdm
-      state: absent
-  when:
-      - rhel9cis_rule_1_8_1
-      - "'gdm' in ansible_facts.packages"
-      - not rhel9cis_gui
-  tags:
-      - level2-server
-      - patch
-      - gui
-      - gdm
-      - rule_1.8.1
+
 
 - name: "1.8.2 | PATCH | Ensure GDM login banner is configured"
   block:
@@ -158,8 +145,7 @@
       - rhel9cis_rule_1_8_6
       - rhel9cis_gui
   tags:
-      - level1-server
-      - level2-workstation
+      - level1-server      
       - patch
       - gui
       - rule_1.8.6
@@ -187,7 +173,6 @@
       - rhel9cis_gui
   tags:
       - level1-server
-      - level2-workstation
       - patch
       - gui
       - rule_1.8.7
@@ -215,7 +200,6 @@
       - rhel9cis_gui
   tags:
       - level1-server
-      - level2-workstation
       - patch
       - gui
       - rule_1.8.8
@@ -243,7 +227,6 @@
       - rhel9cis_gui
   tags:
       - level1-server
-      - level2-workstation
       - patch
       - gui
       - rule_1.8.9
