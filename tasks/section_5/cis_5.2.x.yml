@@ -233,26 +233,12 @@
   when:
       - rhel9cis_rule_5_2_12
   tags:
-      - level2-server
       - level1-workstation
       - patch
       - ssh
       - rule_5.2.12
 
-- name: "5.2.13 | PATCH | Ensure SSH AllowTcpForwarding is disabled"
-  ansible.builtin.lineinfile:
-      path: "{{ rhel9_cis_sshd_config_file }}"
-      regexp: "^#AllowTcpForwarding|^AllowTcpForwarding"
-      line: 'AllowTcpForwarding no'
-      validate: sshd -t -f %s
-  when:
-      - rhel9cis_rule_5_2_13
-  tags:
-      - level2-server
-      - level2-workstation
-      - patch
-      - ssh
-      - rule_5.2.13
+
 
 - name: "5.2.14 | PATCH | Ensure system-wide crypto policy is not over-ridden"
   block:
