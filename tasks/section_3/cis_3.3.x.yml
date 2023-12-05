@@ -173,22 +173,4 @@
       - patch
       - rule_3.3.8
 
-- name: "3.3.9 | PATCH | Ensure IPv6 router advertisements are not accepted"
-  block:
-      - name: "3.3.9 | PATCH | Ensure IPv6 router advertisements are not accepted | IPv6 | Set Fact"
-        ansible.builtin.set_fact:
-            rhel9cis_sysctl_update: true
-            rhel9cis_flush_ipv6_route: true
 
-      - name: "3.3.9 | PATCH | Ensure IPv6 router advertisements are not accepted | IPv6"
-        ansible.builtin.debug:
-            msg: "Control being set via Handler 'update sysctl' which writes to /etc/sysctl.d/60-netipv6_sysctl"
-  when:
-      - rhel9cis_ipv6_required
-      - rhel9cis_rule_3_3_9
-  tags:
-      - level2-server
-      - level2-workstation
-      - sysctl
-      - patch
-      - rule_3.3.9
