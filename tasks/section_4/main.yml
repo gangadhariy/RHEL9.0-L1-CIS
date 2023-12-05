@@ -1,10 +1,6 @@
 ---
 
 
-- name: "SECTION | 4.1.4 | Configure Audit files"
-  ansible.builtin.import_tasks:
-      file: cis_4.1.4.x.yml
-
 - name: "SECTION | 4.2 | Configure Logging"
   ansible.builtin.import_tasks:
       file: cis_4.2.1.x.yml
