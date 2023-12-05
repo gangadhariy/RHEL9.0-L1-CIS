@@ -26,7 +26,6 @@
       - "'avahi' in ansible_facts.packages or 'avahi-autopd' in ansible_facts.packages"
   tags:
       - level1-server
-      - level2-workstation
       - patch
       - avahi
       - rule_2.2.2
